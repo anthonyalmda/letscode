@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>controle de material</title>
+  <link rel="stylesheet" href="stylecontroledematerial.css">
+
+</head>
+
+<h1>
+  CONTROLE DE MATERIAL
+</h1>
+
+<body>
+  <div>
+    <form id="material">
+      <input name="item-name" type="text" id="id-name" placeholder="DIGITE O NOME DO PRODUTO" style="text-align: center;"><br>
+      <input name="item-quantidade" type="text" id="id-quantidade" placeholder="DIGITE A QUANTIDADE DO PRODUTO" style="text-align: center;"><br>
+      <input name="item-preco" type="text" id="id-preco" placeholder="DIGITE O PREÇO DO PRODUTO" style="text-align: center;"> 
+      <br>
+      <br>
+      <button type="submit" id="submit"> SALVAR </button>
+      <BR>
+    </form>
+  </div>
+
+  <div>
+    <table id="lista-tabela">
+      <thead>
+        <tr>
+          <th>NOME</th>
+          <th>QUANTIDADE</th>
+          <th>PREÇO</th>
+        
+        </tr>
+    
+      </thead>
+      <tbody>
+    
+      </tbody>
+    </table>
+  </div>
+  <script id="tabelajs">
+  const form = document.querySelector('#material');
+  const inputName = document.querySelector('#id-name');
+  const inputQuantidade = document.querySelector('#id-quantidade');
+  const inputPreco = document.querySelector('#id-preco');
+  const tabela = document.querySelector('#lista-tabela tbody');
+  
+  function adicionarItem(event) {
+    event.preventDefault(); 
+  
+    const nome = inputName.value;
+    const quantidade = inputQuantidade.value;
+    const preco = inputPreco.value;
+  
+    if (nome && quantidade && preco) {
+      const tr = document.createElement('tr');
+      const tdNome = document.createElement('td');
+      const tdQuantidade = document.createElement('td');
+      const tdPreco = document.createElement('td');
+  
+      tdNome.textContent = nome;
+      tdQuantidade.textContent = quantidade;
+      tdPreco.textContent = preco;
+  
+      tr.appendChild(tdNome);
+      tr.appendChild(tdQuantidade);
+      tr.appendChild(tdPreco);
+  
+      tabela.appendChild(tr);
+ 
+      inputName.value = '';
+      inputQuantidade.value = '';
+      inputPreco.value = '';
+    }
+  }
+  
+  form.addEventListener('submit', adicionarItem);
+</script>
+</body>
+
+</html>

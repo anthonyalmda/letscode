@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Música Favorita</title>
+</head>
+<body>
+	<h1>Minha música favorita</h1>
+	<audio controls>
+		<source src="caminho/do/arquivo/de/audio.mp3" type="audio/mpeg">
+		Seu navegador não suporta o elemento de áudio.
+	</audio>
+</body>
+</html>

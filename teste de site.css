@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Happy Anniversary!</title>
+	<!-- Link to CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Happy Anniversary!</h1>
+	</header>
+	<main>
+		<!-- Audio player for background music -->
+		<audio src="your-music-file.mp3" autoplay loop></audio>
+		<h2>Our Love Story</h2>
+		<!-- Image gallery of your love story -->
+		<div class="gallery">
+			<img src="image1.jpg" alt="Our First Date">
+			<img src="image2.jpg" alt="Our First Kiss">
+			<img src="image3.jpg" alt="Our First Vacation">
+			<img src="image4.jpg" alt="Our Engagement">
+			<img src="image5.jpg" alt="Our Wedding">
+		</div>
+		<p>Insert your love story here...</p>
+		<!-- Dynamic buttons to navigate to different sections of the page -->
+		<div class="buttons">
+			<button onclick="location.href='#love-story'">Love Story</button>
+			<button onclick="location.href='#photos'">Photos</button>
+			<button onclick="location.href='#messages'">Messages</button>
+		</div>
+	</main>
+	<footer>
+		<p>Created by AgentGPT</p>
+	</footer>
+</body>
+</html>
+CSS Code:
+
+/* Set pink color palette */
+:root {
+	--primary-color: #ff0080;
+	--secondary-color: #ff80bf;
+	--tertiary-color: #ffe5ec;
+}
+
+/* Style
